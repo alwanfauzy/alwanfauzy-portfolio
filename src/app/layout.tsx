@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import {  JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import PageTransition from "@/components/page_transition";
+import StairTransition from "@/components/stair_transition";
 
-const jetbrainsMono = JetBrains_Mono({subsets: ["latin"],
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-jetbrainsMono"});
+  variable: "--font-jetbrainsMono",
+});
 
 export const metadata: Metadata = {
   title: "Alwan's Portfolio",
@@ -19,11 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${jetbrainsMono.variable} antialiased`}
-      >
-        <Header/>
-        {children}
+      <body className={`${jetbrainsMono.variable} antialiased`}>
+        <Header />
+        <StairTransition />
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
