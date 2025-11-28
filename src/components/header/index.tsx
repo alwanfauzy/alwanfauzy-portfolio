@@ -16,13 +16,13 @@ const Header: FC = () => {
         {/* desktop nav */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link
+          {/*<Link
             href="https://docs.google.com/document/d/1tlXo26tF2k1ko7JkMmZfxldvS7fIf-mW/edit?usp=sharing&ouid=108685435910779053166&rtpof=true&sd=true"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button>Resume</Button>
-          </Link>
+          </Link>*/}
         </div>
 
         {/* mobile nav */}

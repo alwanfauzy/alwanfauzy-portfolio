@@ -12,7 +12,6 @@ type LinkItem = {
 const links: LinkItem[] = [
   { name: "overview", path: "/" },
   { name: "works", path: "/works" },
-  { name: "about", path: "/about" },
 ];
 
 const Nav: FC = () => {
